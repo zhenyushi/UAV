@@ -24,6 +24,10 @@ Make the scripts executable:
 ~~~
 $ chmod +x something.py
 ~~~
-Check out the tutorial of ROS:
+ROS tutorial:
 
 http://wiki.ros.org/ROS/Tutorials
+
+ROS communication tutorial:
+
+http://gazebosim.org/tutorials/?tut=ros_comm
