@@ -1,0 +1,60 @@
+import rospy
+import rospkg
+import time
+import numpy as np
+
+
+from math import *
+from std_msgs.msg import String
+from geometry_msgs.msg import Twist
+from turtlesim.msg import Pose
+
+
+#### Global Parameters Initialized ####
+
+xn       = 0
+yn       = 0
+psi      = 0
+psi_wrap = 0
+
+
+def callback(data): #  read data from turtle1/pose
+
+    global xn,yn,psi,psi_wrap,v_act,w_act 
+    xn       = data.x
+    yn       = data.y
+    psi      = data.theta
+    psi_wrap = psi
+
+    
+   
+
+if __name__ == '__main__': # this is main function
+    
+    rospy.init_node('wp_control', anonymous=True) # initialize node here
+    r = rospy.Rate(10)
+    
+    ## setup the publisher
+    pub1 = rospy.Publisher('turtle1/cmd_vel', Twist, queue_size = 10)
+   
+
+    ## setup the subscriber
+    sub = rospy.Subscriber("/turtle1/pose", Pose, callback) #motion model
+
+    while not rospy.is_shutdown():
+
+        sub = rospy.Subscriber("/turtle1/pose", Pose, callback) #motion model
+	# compute control commands here
+        cmd = Twist()
+        cmd.linear.x = 0.1 # linear velocity
+        cmd.angular.z = 0.2 # turn rate			
+        rospy.loginfo("Reached WP")
+        rospy.signal_shutdown(0)               
+                    
+        ## publish to the topics
+        pub1.publish(cmd)
+        
+
+        r.sleep()
+    rospy.loginfo("Controller Node Has Shutdown.")
+    rospy.signal_shutdown(0)

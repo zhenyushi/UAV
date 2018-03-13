@@ -1,0 +1,33 @@
+<data>
+
+    <factor_SignalToForce>53.9</factor_SignalToForce>
+    <factor_SignalToTorque>50</factor_SignalToTorque>
+    <length_RotorToCenter>0.4</length_RotorToCenter>
+
+    <LPF_e>50</LPF_e>
+
+    <Max_phi_theta>20</Max_phi_theta>
+    <Max_throttle>22</Max_throttle>
+
+    
+    <slide_k_p>3</slide_k_p>
+    <slide_k_i>0.2</slide_k_i>
+    <slide_k_d>30</slide_k_d>
+
+    <yaw_k_p>15</yaw_k_p>
+    <yaw_k_i>0.3</yaw_k_i>
+    <yaw_k_d>10</yaw_k_d>
+
+    <pos_k_p>1</pos_k_p>
+    <pos_k_i>0</pos_k_i>
+    <pos_k_d>15</pos_k_d>
+
+    <thr_k_p>10</thr_k_p>
+    <thr_k_i>0</thr_k_i>
+    <thr_k_d>60</thr_k_d>
+
+
+
+
+</data>
+
