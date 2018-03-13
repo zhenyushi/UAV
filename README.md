@@ -1,5 +1,5 @@
 # UAV
-a Lower-Level Controller for UAVs
+An autonomous Controller prototype for UAVs
 
 Trying to build a lower-level controller for later RSE integration
 
