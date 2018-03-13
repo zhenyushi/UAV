@@ -18,3 +18,11 @@ Implementation:
   
   Run some scripts (to be clearified later)
   
+  
+Make the scripts executable:
+
+$ chmod +x something.py
+
+Check out the tutorial of ROS:
+
+http://wiki.ros.org/ROS/Tutorials
