@@ -4,7 +4,7 @@ a Lower-Level Controller for UAVs
 Trying to build a lower-level controller for later RSE integration
 
 
-**Implementation:**
+## Implementation:
 
   Run roscore:
   
@@ -18,7 +18,7 @@ Trying to build a lower-level controller for later RSE integration
   
   Run some scripts (to be clearified later)
   
-**Additional**
+## Additional
 
 Make the scripts executable:
 
